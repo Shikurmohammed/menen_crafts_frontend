@@ -6,9 +6,17 @@ import { LayoutContext } from './context/layoutcontext';
 import { MenuProvider } from './context/menucontext';
 import Link from 'next/link';
 import { AppMenuItem } from '@/types';
+<<<<<<< HEAD
 
 const AppMenu = () => {
     const { layoutConfig } = useContext(LayoutContext);
+=======
+import { useAuth } from '@/context/AuthContext';
+
+const AppMenu = () => {
+    const { layoutConfig } = useContext(LayoutContext);
+    const { user } = useAuth();
+>>>>>>> 5087a95384600db6bb4ed335f320667c367fa917
 
     const model: AppMenuItem[] = [
         {
@@ -19,6 +27,7 @@ const AppMenu = () => {
             label: 'UI Components',
             items: [
                 { label: 'Crafts', icon: 'pi pi-fw pi-box', to: '/crafts' },
+<<<<<<< HEAD
                 { label: 'Orders', icon: 'pi pi-fw pi-shopping-cart', to: '/orders' },
                 { label: 'Users', icon: 'pi pi-fw pi-users', to: '/users' },
                 { label: 'Profile', icon: 'pi pi-fw pi-user', to: '/profile' },
@@ -39,6 +48,11 @@ const AppMenu = () => {
                 // { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
                 // { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
                 // { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
+=======
+                { label: 'Orders', icon: 'pi pi-fw pi-shopping-cart', to: '/orders', visible: user?.role == 'ADMIN' || user?.role == 'USER' },
+                { label: 'Users', icon: 'pi pi-fw pi-users', to: '/users', visible: user?.role === 'ADMIN' },
+                { label: 'Profile', icon: 'pi pi-fw pi-user', to: '/profile' },
+>>>>>>> 5087a95384600db6bb4ed335f320667c367fa917
             ]
         },
 
@@ -73,6 +87,7 @@ const AppMenu = () => {
                         }
                     ]
                 },
+<<<<<<< HEAD
                 //     {
                 //         label: 'Crud',
                 //         icon: 'pi pi-fw pi-pencil',
@@ -93,6 +108,9 @@ const AppMenu = () => {
                 //         icon: 'pi pi-fw pi-circle-off',
                 //         to: '/pages/empty'
                 //     }
+=======
+
+>>>>>>> 5087a95384600db6bb4ed335f320667c367fa917
             ]
         },
 
@@ -105,8 +123,11 @@ const AppMenu = () => {
                 {model.map((item, i) => {
                     return !item?.seperator ? <AppMenuitem item={item} root={true} index={i} key={item.label} /> : <li className="menu-separator"></li>;
                 })}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5087a95384600db6bb4ed335f320667c367fa917
             </ul>
         </MenuProvider>
     );

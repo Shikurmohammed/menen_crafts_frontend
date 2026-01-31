@@ -6,6 +6,7 @@ interface AppLayoutProps {
 }
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
     title: 'PrimeReact Sakai',
     description: 'The ultimate collection of design-agnostic, flexible and accessible React UI Components.',
     robots: { index: false, follow: false },
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
         images: ['https://www.primefaces.org/static/social/sakai-react.png'],
         ttl: 604800
     },
+=======
+    title: 'MR',
+    description: 'The ultimate collection of design-agnostic, flexible and accessible React UI Components.',
+    robots: { index: false, follow: false },
+    viewport: { initialScale: 1, width: 'device-width' },
+>>>>>>> 5087a95384600db6bb4ed335f320667c367fa917
     icons: {
         icon: 'layout/images/logo-white.jpeg'//'/favicon.ico'
     }
