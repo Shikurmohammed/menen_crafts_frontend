@@ -25,7 +25,6 @@ const AppMenuitem = (props: AppMenuItemProps) => {
 
     useEffect(() => {
         onRouteChange(pathname);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pathname, searchParams]);
 
     const itemClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

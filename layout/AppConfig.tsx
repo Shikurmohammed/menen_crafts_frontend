@@ -56,7 +56,6 @@ const AppConfig = (props: AppConfigProps) => {
 
     useEffect(() => {
         applyScale();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [layoutConfig.scale]);
 
     return (
